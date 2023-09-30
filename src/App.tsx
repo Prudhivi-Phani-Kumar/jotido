@@ -25,9 +25,11 @@ function App() {
 
 	return (
 		<>
-			<div className="flex px-10 py-5 justify-end cursor-pointer 
-			hover:bg-light-mainBackgroundColor dark:hover:bg-dark-mainBackgroundColor" onClick={handleTheme}>
-				{(theme && theme === "light") || isDefaultSetToLightTheme ? <Sun /> : <Moon />}
+			<div className="flex px-10 py-3 justify-end">
+				<span className="p-[8px] rounded-full cursor-pointer hover:bg-light-columnBackgroundColor dark:hover:bg-dark-columnBackgroundColor"
+					onClick={handleTheme}>
+					{(theme && theme === "light") || isDefaultSetToLightTheme ? <Sun /> : <Moon />}
+				</span>
 			</div>
 			<KanbanBoard />
 		</>

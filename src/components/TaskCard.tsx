@@ -110,9 +110,9 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
             deleteTask(task.id);
           }}
           className="stroke-white absolute right-4 top-1/2 -translate-y-1/2 
-          bg-light-mainBackgroundColor 
+          bg-light-columnBackgroundColor 
           dark:bg-dark-columnBackgroundColor 
-          p-2 rounded opacity-60 hover:opacity-100"
+          p-1 rounded opacity-50 hover:opacity-100"
         >
           <TrashIcon />
         </button>

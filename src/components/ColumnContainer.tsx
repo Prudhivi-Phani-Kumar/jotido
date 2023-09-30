@@ -155,7 +155,7 @@ function ColumnContainer({
           className="
         stroke-gray-500
         hover:stroke-white
-        hover:bg-light-mainBackgroundColor
+        hover:bg-light-columnBackgroundColor
         dark:hover:bg-dark-columnBackgroundColor
         rounded
         px-1
