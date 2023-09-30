@@ -1,6 +1,6 @@
 # Drag and drop Kanban Board using React, Typescript, Tailwind, Dnd-Kit, Redux-toolkit, Redux-persist
 
-# todo-list-board
+# Jotido:
 Tapping into the power of productivity and giving people the flexibility to capture their thoughts in an organised and accessible way.
 
 ![image](https://github.com/Prudhivi-Phani-Kumar/todo-list-board/assets/138499569/15c5b6b2-e19e-497f-aa43-86eabe4391d4)
