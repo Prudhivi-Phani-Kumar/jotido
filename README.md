@@ -1,4 +1,4 @@
-# Drag and drop Kanban Board: React, Typescript, Tailwind, Dnd-Kit, Redux-toolkit, Redux-persist
+# Drag and drop Kanban Board using React, Typescript, Tailwind, Dnd-Kit, Redux-toolkit, Redux-persist
 
 # todo-list-board
 kanban board to do drag and drop the tasks
