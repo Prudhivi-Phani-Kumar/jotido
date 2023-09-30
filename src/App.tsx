@@ -1,36 +1,37 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import KanbanBoard from "./components/KanbanBoard";
-import Dark from "./icons/Dark";
+import Moon from "./icons/Moon";
 import Sun from "./icons/Sun";
 
 function App() {
 
-  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+	const [theme, setTheme] = useState(localStorage.theme);
+	const isDefaultSetToLightTheme = (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)
 
-  if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
+	useEffect(() => {
+		if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	}, [theme])
 
-  const [theme, setTheme] = useState(localStorage.theme || "dark")
-  function handleTheme() {
-    const themePref = localStorage.theme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", themePref)
-    // localStorage.theme = themePref
-    setTheme(themePref)
+	function handleTheme() {
+		const themePref = localStorage.theme === "light" || isDefaultSetToLightTheme ? "dark" : "light";
+		localStorage.setItem("theme", themePref)
+		setTheme(themePref)
+	}
 
-
-  }
-  return (
-    <>
-      <div className="flex px-10 py-5 justify-end" onClick={handleTheme}>
-        {theme === "light" ? <Sun /> : <Dark />}
-      </div>
-      <KanbanBoard />
-    </>
-  );
+	return (
+		<>
+			<div className="flex px-10 py-5 justify-end cursor-pointer 
+			hover:bg-light-mainBackgroundColor dark:hover:bg-dark-mainBackgroundColor" onClick={handleTheme}>
+				{(theme && theme === "light") || isDefaultSetToLightTheme ? <Sun /> : <Moon />}
+			</div>
+			<KanbanBoard />
+		</>
+	);
 }
 
 export default App;

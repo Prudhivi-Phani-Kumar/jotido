@@ -17,9 +17,9 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-teal-500 rounded-xl;
+  @apply dark:bg-teal-500 bg-[#764abc80] rounded-xl;
 }
 
-.task> ::-webkit-scrollbar-thumb {
-  @apply bg-sky-500 rounded-xl;
-}
+/* .task> ::-webkit-scrollbar-thumb {
+  @apply bg-sky-500 rounded-xl dark:bg-teal-400;
+} */

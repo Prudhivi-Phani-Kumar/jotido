@@ -49,7 +49,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
         opacity-30
       bg-light-mainBackgroundColor 
       dark:bg-dark-mainBackgroundColor 
-      p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl border-2 border-teal-500  cursor-grab relative
+      p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl border-2 border-[#764abc80]  cursor-grab relative
       "
       />
     );
@@ -63,7 +63,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
         {...attributes}
         {...listeners}
         className="bg-light-mainBackgroundColor dark:bg-dark-mainBackgroundColor
-        p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-teal-500 cursor-grab relative"
+        p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-[#764abc80] cursor-grab relative"
       >
         <textarea
           className="
@@ -92,7 +92,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
       {...attributes}
       {...listeners}
       onClick={toggleEditMode}
-      className="bg-light-mainBackgroundColor dark:bg-dark-mainBackgroundColor p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-teal-500 cursor-grab relative task"
+      className="bg-light-mainBackgroundColor dark:bg-dark-mainBackgroundColor p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-[#764abc80] cursor-grab relative task"
       onMouseEnter={() => {
         setMouseIsOver(true);
       }}
