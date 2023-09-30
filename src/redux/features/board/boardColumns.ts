@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 
@@ -13,16 +13,16 @@ export const boardColumns = createSlice({
 	name: "boardColumns",
 	initialState,
 	reducers: {
-		addColumn: (state, action) => {
+		addColumn: (state, action: PayloadAction<BoardState>) => {
 			state.push(action.payload)
 		},
-		updateColumnName: (state, action) => {
+		updateColumnName: (state, action: PayloadAction<BoardState>) => {
 			return state.map((col) => {
 				if (col.id !== action.payload.id) return col;
 				return { ...col, title: action.payload.title };
 			});
 		},
-		moveColumn: (state, action) => {
+		moveColumn: (__, action) => {
 			return action.payload
 		},
 		deleteColumn: (state, action) => {

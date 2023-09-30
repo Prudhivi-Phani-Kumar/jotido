@@ -14,19 +14,19 @@ export const taskItems = createSlice({
 	name: "taskItems",
 	initialState,
 	reducers: {
-		addTask: (state, action) => {
+		addTask: (state, action: PayloadAction<Task>) => {
 			state.push(action.payload)
 		},
-		updateTask: (state, action) => {
+		updateTask: (state, action: PayloadAction<Task>) => {
 			return state.map((task) => {
 				if (task.id !== action.payload.id) return task;
 				return { ...task, content: action.payload.content };
 			});
 		},
-		moveTaskInSameColumn: (state, action) => {
+		moveTaskInSameColumn: (__, action) => {
 			return action.payload
 		},
-		moveTaskOverColumn: (state, action) => {
+		moveTaskOverColumn: (__, action) => {
 			return action.payload
 		},
 		filterTaskOnColumnDelete: (state, action) => {
