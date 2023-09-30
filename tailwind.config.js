@@ -10,9 +10,8 @@ export default {
       colors: {
         "dark-mainBackgroundColor": '#0D1117',
         "dark-columnBackgroundColor": '#161C22',
-        "light-mainBackgroundColor": "lightsteelblue",
-        "light-columnBackgroundColor": "#e0f0ea"
-
+        "light-mainBackgroundColor": "#ffffff",
+        "light-columnBackgroundColor": "#764ABC60"
       }
     },
   },
